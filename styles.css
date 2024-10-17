@@ -332,4 +332,68 @@ footer p {
     color: #555;
     font-size: 14px;
 }
-/* ... (keep other existing styles) ... */
+@media (max-width: 678px) {
+    .container {
+        transition: all 0.5s ease-in-out; /* Smooth transition */
+        width: 90%; /* Flexible width for smaller screens */
+        max-width: 400px; /* Prevent overflow */
+        margin: 0 auto; /* Center the container */
+        
+        /* Adjusted Grid Layout */
+        display: grid;
+        grid-template-rows: auto auto auto 1fr auto auto auto;
+        grid-template-columns: 1fr;
+        gap: 15px; /* Consistent spacing */
+        
+        grid-template-areas:
+            "header"
+            "banner"
+            "left-aside"
+            "main"
+            "right-aside"
+            "low-content"
+            "footer";
+    }
+
+    header {
+        text-align: center;
+        background-color: rgba(48, 238, 226, 0.8); /* Matches your gradient colors */
+        padding: 15px;
+        font-weight: bold;
+        color: #333;
+        font-size: 20px;
+    }
+
+    main {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        background-color: #181616;
+        padding: 10px 0;
+        text-align: center;
+        color: #555;
+        font-size: 14px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Navbar Adjustments */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%; /* Full width on small screens */
+    }
+
+    #searchInput {
+        width: 90%; /* Adjust search bar for better fit */
+        max-width: 350px;
+        right: 10px;
+    }
+}
+
