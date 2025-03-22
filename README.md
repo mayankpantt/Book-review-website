@@ -20,7 +20,7 @@ A personal book review website features a clean layout with a homepage showcasin
 
 - Clone the repository
 - Install dependencies
-- Start the server: node server.js
+- Start the server: node index.js
 - Open the app in your browser: <http://localhost:3000>
 
 **File Structure**
